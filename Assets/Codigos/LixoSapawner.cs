@@ -34,7 +34,7 @@ public class LixoSapawner : MonoBehaviour
     {
         while (points < MaxPoints)
         {
-            Instantiate(Lixo, new Vector3(Random.Range(-maximumX, maximumX=1), fixedY, fixedZ), Quaternion.identity);
+            Instantiate(Lixo, new Vector3(Random.Range(-maximumX, maximumX+1), fixedY, fixedZ), Quaternion.identity);
             yield return new WaitForSeconds(timer);
         }
         victoryText.gameObject.SetActive(true);
