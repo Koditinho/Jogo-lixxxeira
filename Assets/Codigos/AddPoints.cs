@@ -10,9 +10,8 @@ public class AddPoints : MonoBehaviour
         if (collision.gameObject.CompareTag("Lixo"))
         {
             Destroy(collision.gameObject);
-            lixosapawner.AddToPoints(1);            
+            lixosapawner.AddToPoints(1);
         }
-    }
     void Start()
     {
         
@@ -23,4 +22,5 @@ public class AddPoints : MonoBehaviour
     {
         
     }
+}
 }

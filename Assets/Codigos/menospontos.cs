@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruidor : MonoBehaviour
+public class menospontos : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
+    public LixoSapawner lixosapawner;
+    private void OnCollisionEnter(Collision collision){
+
         if (collision.gameObject.CompareTag("Lixo"))
         {
+            lixosapawner.AddToPoints(-1);            
             Destroy(collision.gameObject);
         }
     }
-    // Start is called before the first frame update
     void Start()
     {
         
